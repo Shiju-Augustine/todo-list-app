@@ -3,11 +3,19 @@ import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
     return (
-        <ul>
-            {todos.map(todo => (
-                <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-            ))}
-        </ul>
+        <div>
+            {
+                todos.length === 0 ? (
+                    <p>No todos available</p>
+                ) : (
+                    <ul>
+                        {todos.map(todo => (
+                            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+                        ))}
+                    </ul>
+                )
+            }
+        </div>
     );
 };
 

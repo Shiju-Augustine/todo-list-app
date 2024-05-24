@@ -17,7 +17,7 @@ const TodoInput = ({ addTodo }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={text} onChange={handleChange} placeholder="Add a new todo" />
+            <textarea value={text} onChange={handleChange} placeholder="Add a new todo" />
             <button type="submit">Add</button>
         </form>
     );

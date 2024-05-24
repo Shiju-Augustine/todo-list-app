@@ -9,13 +9,11 @@ body {
   background-color: #f4f4f4;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+.app-container {
+  background: #fff;
+  margin: 30px 80px;
+  border: 2px solid #ccc;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -24,12 +22,47 @@ h1 {
   color: #333;
 }
 
+h1,
+h3 {
+  text-decoration: underline;
+}
+
+.search-input {
+  width: 20%;
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  margin: 0px 10px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.toaster {
+  position: fixed;
+  top: 10px;
+  right: 0px;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+
 form {
   display: flex;
   margin-bottom: 20px;
 }
 
-input[type="text"] {
+textarea {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
@@ -43,6 +76,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: 0px 10px;
 }
 
 button:hover {
@@ -58,6 +92,7 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
 }
 
 input[type="checkbox"] {
@@ -67,7 +102,14 @@ input[type="checkbox"] {
 span {
   flex: 1;
   font-size: 16px;
-  color: #333;
+}
+
+.pending-text {
+  color: #333333;
+}
+
+.completed-text {
+  color: #cccccc;
 }
 
 button.delete {
@@ -81,6 +123,12 @@ button.delete:hover {
 .status {
   display: flex;
   align-items: center;
+}
+
+.status span {
+  background: #eee;
+  padding: 6px;
+  margin: 0px 4px;
 }
 
 .completed-status {
