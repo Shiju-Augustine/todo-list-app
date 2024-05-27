@@ -35,7 +35,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
-  margin: 0px 10px;
+  margin-right: 10px;
 }
 
 .search-input:focus {
@@ -83,6 +83,15 @@ button:hover {
   background-color: #0056b3;
 }
 
+.delete-btn {
+  padding: 8px 10px;
+  background-color: #ff6f61;
+}
+
+.delete-btn:hover {
+  background-color: #eb4a3a;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -97,6 +106,8 @@ li {
 
 input[type="checkbox"] {
   margin-right: 10px;
+  width: 18px;
+  height: 18px;
 }
 
 span {

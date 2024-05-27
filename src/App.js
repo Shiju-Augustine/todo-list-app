@@ -14,9 +14,11 @@ const App = () => {
   useEffect(() => {
     // Load initial dummy data
     const dummyTodos = [
-      { id: 1, text: 'Todo sample text 1', completed: false },
+      { id: 1, text: 'Todo sample text 1', completed: true },
       { id: 2, text: 'Todo sample text 2', completed: true },
-      { id: 3, text: 'Todo sample text 3', completed: false }
+      { id: 3, text: 'Todo sample text 3', completed: false },
+      { id: 4, text: 'Todo sample text 4', completed: false },
+      { id: 5, text: 'Todo sample text 5', completed: false }
     ];
     setTodos(dummyTodos);
   }, []);
@@ -66,8 +68,8 @@ const App = () => {
       <h3>To-Do Items</h3>
       {todos.length > 0 && (
         <div>
-          Total: <b>{todos.length}</b>, Completed: <b>{completedCount}</b>, Pending: <b>{pendingCount}</b>
           <input type="text" className="search-input" value={searchTerm} onChange={handleSearchChange} placeholder="Search todos" />
+          Total: <b>{todos.length}</b>, Completed: <b>{completedCount}</b>, Pending: <b>{pendingCount}</b>
         </div>
       )}
       <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
